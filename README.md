@@ -27,7 +27,7 @@ Projekt stanowi kompletny ekosystem testowy oparty o podejście **Cloud-Ready / 
 Przygotowanie środowiska narzędziowego w oparciu o kontenery.
 
 * **Co zrobiono:** Pobranie oraz konfiguracja obrazów `appium`, `android-sdk` i `mobsf`.
-* **Wniosek:** [OPISZ SAM - dlaczego używamy obrazów Docker zamiast instalować wszystko lokalnie?]
+* **Wniosek:** Wykorzystanie Docker pozwala uniknąć problemów z konfiguracją zależności na systemie lokalnym, zapewnia powtarzalność środowiska oraz izolację narzędzi. Dzięki temu każdy członek zespołu lub środowisko CI/CD może uruchomić identyczną konfigurację bez ręcznej instalacji.
 
 ---
 
@@ -36,7 +36,7 @@ Przygotowanie środowiska narzędziowego w oparciu o kontenery.
 Poznanie struktury aplikacji mobilnej przed rozpoczęciem testów.
 
 * **Co zrobiono:** Wykorzystanie MobSF do analizy plików APK pod kątem luk bezpieczeństwa oraz wymaganych uprawnień.
-* **Wniosek:** [OPISZ SAM - co daje testerowi analiza statyczna kodu APK?]
+* **Wniosek:** Analiza statyczna APK pozwala testerowi zrozumieć architekturę aplikacji, wykryć potencjalne podatności (np. niebezpieczne uprawnienia, hardcodowane dane, błędne konfiguracje) oraz przygotować bardziej świadome scenariusze testowe jeszcze przed uruchomieniem aplikacji.
 
 ---
 
@@ -44,7 +44,7 @@ Poznanie struktury aplikacji mobilnej przed rozpoczęciem testów.
 
 Tworzenie podstaw logiki testowej w Pythonie.
 
-* **Co zrobiono:** [OPISZ SAM - jakich struktur danych i mechanizmów używałeś?]
+* **Co zrobiono:** Praca z podstawowymi strukturami danych, takimi jak listy, słowniki i krotki, które były wykorzystywane do przechowywania danych testowych oraz odpowiedzi API. Tworzono funkcje, moduły oraz wykorzystywano mechanizmy kontroli przepływu (pętle, instrukcje warunkowe). Dodatkowo zapoznano się z obsługą wyjątków (try/except) oraz organizacją kodu w formie testów automatycznych.
 
 ---
 
@@ -61,7 +61,7 @@ Walidacja warstwy backendowej aplikacji mobilnej.
 
 Automatyzacja interakcji z interfejsem użytkownika.
 
-* **Co zrobiono:** [OPISZ SAM - jakie selektory wykorzystywałeś (ID, XPath)? Jakie operacje były symulowane na urządzeniu?]
+* **Co zrobiono:** W testach UI wykorzystywano różne typy selektorów, w szczególności identyfikatory elementów (ID) oraz XPath do lokalizowania komponentów w hierarchii widoku aplikacji. Symulowane były typowe działania użytkownika, takie jak kliknięcia, wpisywanie tekstu, przewijanie ekranu (scroll), oczekiwanie na elementy (explicit waits) oraz nawigacja pomiędzy ekranami aplikacji.
 
 ---
 
@@ -69,7 +69,7 @@ Automatyzacja interakcji z interfejsem użytkownika.
 
 Oddzielenie środowiska Appium od systemu operacyjnego.
 
-* **Co zrobiono:** Utworzenie pliku `docker-compose.yml`, który zarządza uruchamianiem serwera Appium oraz sterowników.
+* **Co zrobiono:** Utworzenie pliku `docker-compose.yml`, który zarządza uruchamianiem serwera Appium oraz sterowników. Dzięki temu możliwe było łatwe uruchamianie, zatrzymywanie i skalowanie usług testowych w jednym spójnym środowisku kontenerowym.
 
 ---
 
@@ -94,7 +94,8 @@ W projekcie zastosowano rozbudowane raportowanie Allure, które umożliwia:
 * Analizę błędów wraz z dodatkowymi artefaktami (np. screenshoty, logi JSON).
 * Dokumentowanie środowiska wykonawczego w sekcji **Environment**.
 
-[TUTAJ WRZUĆ SCREENA SWOJEGO DASHBOARDU ALLURE]
+<img width="929" height="830" alt="image" src="https://github.com/user-attachments/assets/35791796-f0bb-41b4-b228-e60fd0ef4dfd" />
+
 
 ---
 
